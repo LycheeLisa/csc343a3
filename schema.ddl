@@ -48,7 +48,7 @@ CREATE TABLE interviewinfo (
   interviewlocation varchar(50) NOT NULL
 );
 
-DEFINE assessmentScore AS smallint 
+CREATE DOMAIN assessmentScore AS smallint 
   CHECK (VALUE >=0) and (VALUE <=100);
   
 CREATE TABLE assessment (
