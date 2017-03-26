@@ -16,7 +16,7 @@ CREATE DOMAIN scores AS smallint
 -- The table with pID and position name
 CREATE TABLE position (
   pID varchar(20) PRIMARY KEY,
-  position varchar(100)
+  position varchar(100) NOT NULL
 );
 -- The table with required skills, level and importance
 CREATE TABLE reqSkill  (
@@ -28,7 +28,7 @@ CREATE TABLE reqSkill  (
 -- The table with questions
 CREATE TABLE questions (
   qID varchar(20) PRIMARY KEY,
-  question varchar(100)
+  question varchar(100) NOT NULL
 );
 -- The table with interview information
 CREATE TABLE interviewer (
@@ -48,24 +48,19 @@ CREATE TABLE interviewinfo (
   interviewlocation varchar(50) NOT NULL
 );
 
-CREATE DOMAIN assessmentScore AS smallint 
-  CHECK (VALUE >=0) and (VALUE <=100);
-  
 CREATE TABLE assessment (
- rID varchar(20),
- pID varchar(20),
- sID varchar(20),
- techProficiency assessmentScore NOT NULL,
- communication assessmentScore NOT NULL,
- enthusiasm assessmentScore NOT NULL,
- collegiality assessmentScore,
- FOREIGN KEY (rID, pID, sID) REFERENCES interviewinfo(rID, pID, sID)
-    
+   rID varchar(20),
+   pID varchar(20),
+   sID varchar(20),
+   techProficiency scores NOT NULL,
+   communication scores NOT NULL,
+   enthusiasm scores NOT NULL,
+   collegiality scores,
+   FOREIGN KEY (rID, pID, sID) REFERENCES interviewinfo(rID, pID, sID)
 );
 
 CREATE TABLE QandA (
- rID varchar(20) REFERENCES assessment,
- qID varchar(20) REFERENCES questions,
- answer varchar(100)   
- 
+   rID varchar(20) REFERENCES assessment,
+   qID varchar(20) REFERENCES questions,
+   answer varchar(100) NOT NULL
 );
