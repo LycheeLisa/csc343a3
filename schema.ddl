@@ -48,24 +48,19 @@ CREATE TABLE interviewinfo (
   interviewlocation varchar(50) NOT NULL
 );
 
-DEFINE assessmentScore AS smallint 
-  CHECK (VALUE >=0) and (VALUE <=100);
-  
 CREATE TABLE assessment (
- rID varchar(20),
- pID varchar(20),
- sID varchar(20),
- techProficiency assessmentScore NOT NULL,
- communication assessmentScore NOT NULL,
- enthusiasm assessmentScore NOT NULL,
- collegiality assessmentScore,
- FOREIGN KEY (rID, pID, sID) REFERENCES interviewinfo(rID, pID, sID)
-    
+   rID varchar(20),
+   pID varchar(20),
+   sID varchar(20),
+   techProficiency scores NOT NULL,
+   communication scores NOT NULL,
+   enthusiasm scores NOT NULL,
+   collegiality scores,
+   FOREIGN KEY (rID, pID, sID) REFERENCES interviewinfo(rID, pID, sID)
 );
 
 CREATE TABLE QandA (
- rID varchar(20) REFERENCES assessment,
- qID varchar(20) REFERENCES questions,
- answer varchar(100)   
- 
+   rID varchar(20) REFERENCES assessment,
+   qID varchar(20) REFERENCES questions,
+   answer varchar(100) NOT NULL
 );
