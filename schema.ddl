@@ -16,7 +16,7 @@ CREATE DOMAIN scores AS smallint
 -- The table with pID and position name
 CREATE TABLE position (
   pID varchar(20) PRIMARY KEY,
-  position varchar(100)
+  position varchar(100) NOT NULL
 );
 -- The table with required skills, level and importance
 CREATE TABLE reqSkill  (
@@ -28,7 +28,7 @@ CREATE TABLE reqSkill  (
 -- The table with questions
 CREATE TABLE questions (
   qID varchar(20) PRIMARY KEY,
-  question varchar(100)
+  question varchar(100) NOT NULL
 );
 -- The table with interview information
 CREATE TABLE interviewer (
