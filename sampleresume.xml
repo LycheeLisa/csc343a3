@@ -1,0 +1,49 @@
+<?xml version = "1.0" standalone = "no" ?>
+
+<!DOCTYPE resumes SYSTEM "resume.dtd">
+
+<resumes>
+ <resume rID = "r1">
+  <summary>Generic person's resume</summary>
+  <identification>
+    <name>
+     <forename>Gary</forename>
+     <surname>Smith</surname>
+     <honorific>Dr.</honorific>
+     <honorific>Mr.</honorific>
+     <title>Sociopath</title>
+    </name>
+    <DOB>17/10/2006</DOB>
+    <citizenship>U.S.</citizenship>
+    <address>Bullworth Academy</address>
+    <telephone>1000350761</telephone>
+    <email>gsmith@yahoo.com</email> 
+  </identification>
+  <education>
+   <degree level = "undergraduate">
+    <degreeName>Bachelors of Science</degreeName>
+    <institution>Bullworth</institution>
+    <major>Psychology</major>
+    <minor>Backstabbing</minor>
+    <honours/>
+    <period>
+     <startDate>16/07/2014</startDate>
+     <endDate>08/08/2016 </endDate>
+    </period>
+   </degree>
+  </education>
+  <experience>
+   <position where="Bullworth">
+    <title>Head Boy</title>
+    <description>Guiding (Manipulating) student body </description>
+    <period>
+     <startDate>11/11/2016</startDate>
+     <endDate>20/03/2017</endDate>
+    </period> 
+   </position>
+  </experience>
+  <skills>
+   <skill what = "Scheme" level="5"/>
+  </skills>
+ </resume>
+</resumes>
