@@ -1,0 +1,31 @@
+<?xml version = "1.0" standalone = "no"?>
+<!DOCTYPE interviews SYSTEM "interview.dtd">
+
+<interviews>
+ <interview rID = "r1" pID = "p1" sID = "s1">
+  <date>24/03/17 </date>
+  <time>13:00 </time>
+  <location>Spinner's End </location>
+  <assessment>
+   <answers>
+    <answer qID = "q1">
+      7.
+    </answer>
+    <answer qID = "q2">
+      I let him have his fun and swooped in the right moment to take it all.
+    </answer>
+   </answers>
+   <techProficiency>Excellent. </techProficiency>
+   <communication>Powerful rhetoric. </communication>
+   <enthusiasm> Very Eager. </enthusiasm>
+   <collegiality>Gives sound advice to colleagues (minions).  </collegiality> 
+  </assessment>
+ </interview>
+
+ <interviewer sID = "s1">
+   <forename>Iago </forename>
+   <surname>McLaren </surname>
+   <honorific>Dr.</honorific>
+   <title>King's Advisor</title>
+ </interviewer>
+</interviews>
