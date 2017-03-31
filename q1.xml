@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE postings[
+<!ELEMENT postings (posting+)>
+<!ELEMENT posting (position,reqSkill+,questions*)>
+<!ATTLIST posting pID ID #REQUIRED>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT reqSkill EMPTY>
+<!ATTLIST reqSkill what (SQL|Scheme|Python|R|LaTeX) #REQUIRED>
+<!ATTLIST reqSkill level (1|2|3|4|5) #REQUIRED>
+<!ATTLIST reqSkill importance (1|2|3|4|5) #REQUIRED>
+<!ELEMENT questions (question*)>
+<!ELEMENT question (#PCDATA)>
+<!ATTLIST question qID CDATA #REQUIRED>
+]>
+<postings>
+  <posting pID = "1">
+    <reqSkill what="SQL" level="3" importance="3"/>
+      <questions>
+        <question qID="1">"What do you want this job?"</question>
+      </questions>
+  </posting>
+  <posting pID = "2">
+    <reqSkill what="SQL" level="5" importance="2"/>
+      <questions>
+        <question qID="1">"What do you want this job?"</question>
+      </questions>
+  </posting>
+  <posting pID = "3">
+    <reqSkill what="R" level="3" importance="4"/>
+      <questions>
+        <question qID="1">"What do you want this job?"</question>
+      </questions>
+  </posting>
+  <posting pID = "4">
+    <reqSkill what="SQL" level="5" importance="3"/>
+      <questions>
+        <question qID="2">"Why are you qualified this job?"</question>
+      </questions>
+  </posting>
+</postings>
