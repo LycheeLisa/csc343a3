@@ -1,0 +1,15 @@
+let $d1 = fn:doc("posting.xml")
+let $d2 = fn:doc("resume.xml")
+
+for $skill in distinct-values($d1//skill/@what)
+  return
+  <results>
+    for $resume in $d2//resume
+    where $d2//skill/@what = $skill
+    return
+      <count>
+        for $i in 1 to 5
+        where $resume//skill/[@level = $i]
+        return ($i, count($resume))
+      </count>
+    </results>
