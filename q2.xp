@@ -1,0 +1,11 @@
+<important>{
+let $d := fn:doc("sampleposting.xml")
+let $m := max(
+             (for $p in $d/postings/posting
+              let $product :=  ($p/reqSkill/@level)*($p/reqSkill/@importance)
+              return $product))
+for $p2 in $d/postings/posting
+let $product2 :=  ($p2/reqSkill/@level)*($p2/reqSkill/@importance)
+where $product2 = $m 
+return $p2
+}</important>
