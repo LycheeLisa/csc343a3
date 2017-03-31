@@ -1,0 +1,17 @@
+<?xml version = "1.0" standalone = "no" ?>
+<!DOCTYPE postings SYSTEM "posting.dtd">
+
+<postings>
+ <posting pID = "p1">
+  <position>To lie and deceive.</position>
+  <reqSkill what="Scheme" level="4" importance="5"/>
+  <questions>
+   <question qID = "q1">
+    How many people did you deceive in the past?
+   </question>
+   <question qID = "q2">
+    Elaborate on an event when you skilfully deceived someone.
+   </question>
+  </questions>
+ </posting> 
+</postings>

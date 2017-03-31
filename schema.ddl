@@ -91,12 +91,15 @@ CREATE TABLE summary (
   summary varchar(200)
 );
 -- The table with candidate's education information
+-- (Erase late) - Converted period to startDate and endDate as that is what a
+-- period is according to the dtd
 CREATE TABLE education (
   rID varchar(20) REFERENCES resume,
   degreeName varchar(30) NOT NULL,
   institution varchar(50) NOT NULL,
   honors varchar(20),
-  period varchar(20) NOT NULL,
+  startDate varchar(50) NOT NULL
+  endDate varchar(50) NOT NULL,
   level degreelevel NOT NULL
 )
 -- The table with candidate's major
@@ -112,4 +115,22 @@ CREATE TABLE minor (
   degreeName varchar(30) NOT NULL,
   institution varchar(50) NOT NULL,
   minor varchar(20) NOT NULL
+);
+
+-- table containing person's experiences
+CREATE TABLE position (
+  rID varchar(20) REFERENCES resume,
+  where varchar(50) NOT NULL,
+  description varchar(100),
+  title varchar(50) NOT NULL,
+  startDate varchar(50) NOT NULL, 
+  endDate varchar(50) NOT NULL
+
+);
+
+-- table containing person's skills
+CREATE TABLE skill (
+  rID varchar(20) REFERENCES resume,
+  what reqSkillDescription NOT NULL,
+  skilllevel level NOT NULL 
 );
