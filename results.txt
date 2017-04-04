@@ -1,0 +1,112 @@
+Running Assignment 3 XPath/XQuery Solutions
+
+============================== Query q1  ==============================
+
+------ raw output ------
+
+<dbjobs><posting pID="2">
+    <reqSkill what="SQL" level="5" importance="2"/>
+      <questions>
+        <question qID="1">&quot;What do you want this job?&quot;</question>
+      </questions>
+  </posting></dbjobs>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<dbjobs>
+  <posting pID="2">
+    <reqSkill what="SQL" level="5" importance="2"/>
+    <questions>
+      <question qID="1">"What do you want this job?"</question>
+    </questions>
+  </posting>
+</dbjobs>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+TEMP.xml:3: element posting: validity error : Syntax of value for attribute pID of posting is not valid
+<dbjobs><posting pID="2">
+                        ^
+TEMP.xml:8: element posting: validity error : Element posting content does not follow the DTD, expecting (position , reqSkill+ , questions*), got (reqSkill questions )
+  </posting></dbjobs>
+            ^
+
+============================== Query q2  ==============================
+
+------ raw output ------
+
+  Undefined Error: file: q2.xq not found
+
+------ formatted output (therefore well-formed) ------
+
+TEMP.xml:2: parser error : Start tag expected, '<' not found
+  Undefined Error: file: q2.xq not found
+  ^
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+TEMP.xml:3: parser error : Start tag expected, '<' not found
+  Undefined Error: file: q2.xq not found
+  ^
+
+============================== Query q3  ==============================
+
+------ raw output ------
+
+[WARNING] Silently ignoring value for non-declared external variable: $dataset0
+<qualified><candidate rID="91" numskills="3" citizenship="Canadian"><name>Lisa</name></candidate><candidate rID="2" numskills="3" citizenship="Chinese"><name>Tickle</name></candidate><candidate rID="42" numskills="4" citizenship="Canadian"><name>Tim</name></candidate></qualified>
+
+------ formatted output (therefore well-formed) ------
+
+TEMP.xml:2: parser error : Start tag expected, '<' not found
+[WARNING] Silently ignoring value for non-declared external variable: $dataset0
+^
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+TEMP.xml:3: parser error : Start tag expected, '<' not found
+[WARNING] Silently ignoring value for non-declared external variable: $dataset0
+^
+
+============================== Query q4  ==============================
+
+------ raw output ------
+
+  ERROR: Unable to open the external entity: [toplevel] = SYSTEM "file://localhost/h/u16/c6/00/chenji13/csc209/chenji13/CSC343A3/csc343a3/interview.xml"; reason: Other exception: Sys_error("/h/u16/c6/00/chenji13/csc209/chenji13/CSC343A3/csc343a3/interview.xml: No such file or directory")
+
+------ formatted output (therefore well-formed) ------
+
+TEMP.xml:2: parser error : Start tag expected, '<' not found
+  ERROR: Unable to open the external entity: [toplevel] = SYSTEM "file://localho
+  ^
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+TEMP.xml:3: parser error : Start tag expected, '<' not found
+  ERROR: Unable to open the external entity: [toplevel] = SYSTEM "file://localho
+  ^
+
+============================== Query q5  ==============================
+
+------ raw output ------
+
+  Undefined Error: file: q5.xq not found
+
+------ formatted output (therefore well-formed) ------
+
+TEMP.xml:2: parser error : Start tag expected, '<' not found
+  Undefined Error: file: q5.xq not found
+  ^
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+TEMP.xml:3: parser error : Start tag expected, '<' not found
+  Undefined Error: file: q5.xq not found
+  ^
+

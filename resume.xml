@@ -47,6 +47,7 @@
     <skills>
       <skill what="SQL" level="5"/>
       <skill what="Python" level="4"/>
+     <skill what="R" level = "4"/>
     </skills>
   </resume>
   <resume rID="2">
@@ -60,6 +61,7 @@
     <skills>
       <skill what="SQL" level="5"/>
       <skill what="Python" level="3"/>
+      <skill what="R" level="5"/>
     </skills>
   </resume>
   <resume rID="23">
