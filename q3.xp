@@ -2,5 +2,5 @@
   let $parsed := fn:doc("q3.xml")
   for $candidate in ($parsed//resume)
   where count($parsed//resume[@rID/string() = $candidate/@rID/string()]//skill/@what) >= 3
-  return ($candidate//forename, $candidate//citizenship, <numskills>{count($parsed//resume[@rID/string() = $candidate/@rID/string()]//skill/@what)}</numskills>)
+  return <candidate rID="{$candidate/@rID/string()}" numskills="{count($parsed//resume[@rID/string() = $candidate/@rID/string()]//skill/@what)}" citizenship="{$candidate//citizenship}"><name>{$candidate//forename/string()}</name></candidate>
 }</qualified>
